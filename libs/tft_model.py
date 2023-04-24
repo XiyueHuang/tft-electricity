@@ -34,6 +34,9 @@ import libs.utils as utils
 import numpy as np
 import pandas as pd
 import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
+from tensorflow.python.framework import ops
+from tensorflow.python.ops import math_ops
 
 # Layer definitions.
 concat = tf.keras.backend.concatenate

@@ -579,10 +579,10 @@ def main(expt_name, force_download, output_folder):
   if os.path.exists(expt_config.data_csv_path) and not force_download:
     print('Data has been processed for {}. Skipping download...'.format(
         expt_name))
-    sys.exit(0)
-  else:
-    print('Resetting data folder...')
-    recreate_folder(expt_config.data_folder)
+    return
+
+  print('Resetting data folder...')
+  recreate_folder(expt_config.data_folder)
 
   # Default download functions
   download_functions = {
